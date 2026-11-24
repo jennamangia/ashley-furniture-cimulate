@@ -1,0 +1,34 @@
+[
+  {
+    "path": "public/images/ashley/search/Green Kids Room.png",
+    "sha256": "63b17417316c2a55510613c1d114589256de77d0251685b0df8e05b6bf63a8a6"
+  },
+  {
+    "path": "public/images/ashley/search/catnapper ACS.png",
+    "sha256": "add278bd0df4ecbe5b2f42b57543dc5ae17554a4cedf046127124865c2155cc9"
+  },
+  {
+    "path": "public/images/ashley/search/catnapper.png",
+    "sha256": "a6440c796bee5b33081fffabdf13640a51144865300f052b2f87ebf8c48acb7d"
+  },
+  {
+    "path": "public/images/ashley/search/cheap blue couch for college dorm ACS.png",
+    "sha256": "2177e7e0f6501a9b04074b9db0b245522949087886d369835deec90a6900d289"
+  },
+  {
+    "path": "public/images/ashley/search/cheap blue couch for college dorm.png",
+    "sha256": "3c861982de7499a80eeecf2a3c6897a578f3cc0fe6dc6ce859f3c614d2cbda36"
+  },
+  {
+    "path": "public/images/ashley/search/green kids room ACS.png",
+    "sha256": "477626f3ab8b15f53eb2de6a23894e8278ae5028433d58f15a67ded0a1efb166"
+  },
+  {
+    "path": "public/images/ashley/search/scandy style furniture ASC.png",
+    "sha256": "3ab324bdc1f880962d3cdc1dfc7795b645ee0392e2bbc916ba79b62b940a56c9"
+  },
+  {
+    "path": "public/images/ashley/search/scandy style furniture.png",
+    "sha256": "d42be86cf899bfff9e51bcf0e54b1798281810a1bbeae745209d43ed45548601"
+  }
+]
