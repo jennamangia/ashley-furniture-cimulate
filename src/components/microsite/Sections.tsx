@@ -142,12 +142,9 @@ export function Hero({ setActive }: { setActive: (index: number) => void }) {
             <Cloud className="w-5" /> Agentic Commerce Search <span aria-hidden="true">|</span>
             <span className="font-medium">Salesforce</span>
           </span>
-          <p className="eyebrow mt-6 text-sky">Ashley Furniture × Agentic Commerce Search</p>
           <h1 className="mt-4 text-[clamp(1.875rem,4.2vw,3.75rem)] font-semibold leading-[1.08] text-balance">
             Ashley Knows How to Furnish a Home.{" "}
-            <span className="text-sky">
-              Agentic Commerce Search Understands What Shoppers Are Trying to Create.
-            </span>
+            <span className="text-sky">We Understand What Shoppers Are Trying to Create.</span>
           </h1>
           <p className="mt-6 max-w-xl text-lg text-navy-muted md:text-xl">
             From finding the perfect recliner to furnishing an entire room, discover how AI-native
@@ -182,12 +179,8 @@ export function Hero({ setActive }: { setActive: (index: number) => void }) {
           </div>
         </div>
         <div className="relative z-10 mx-auto w-full max-w-[15rem] sm:max-w-sm">
-          <div className="rounded-[2rem] border border-sky/20 bg-navy/40 p-6 shadow-glow backdrop-blur">
-            <div className="relative">
-              <Cloud className="pointer-events-none absolute inset-x-6 bottom-2 text-sky/15" />
-              <Mascot name="Astro" className="animate-float relative" />
-            </div>
-          </div>
+          <Cloud className="pointer-events-none absolute inset-x-6 bottom-2 text-sky/15" />
+          <Mascot name="Astro" className="animate-float relative" />
         </div>
       </div>
       <a

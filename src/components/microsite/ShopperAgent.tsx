@@ -165,7 +165,7 @@ export function ShopperAgent() {
         <div
           className={
             productPage
-              ? "bg-white"
+              ? "relative bg-white lg:[container-type:inline-size]"
               : "grid grid-cols-1 items-start lg:grid-cols-[minmax(0,1fr)_22rem]"
           }
         >
@@ -182,7 +182,7 @@ export function ShopperAgent() {
           <div
             className={
               productPage
-                ? "relative z-10 min-w-0 px-4 pb-4 lg:ml-auto lg:-mt-28 lg:w-[22rem]"
+                ? "z-10 min-w-0 p-4 lg:absolute lg:right-4 lg:bottom-4 lg:w-[min(30cqw,24rem)] lg:p-0"
                 : "min-w-0 self-stretch border-t bg-muted p-4 lg:border-l lg:border-t-0"
             }
           >
@@ -225,7 +225,7 @@ export function ShopperAgent() {
                   if (atBottom || log.scrollTop < lastTop.current) following.current = atBottom;
                   lastTop.current = log.scrollTop;
                 }}
-                className="h-[min(22rem,60svh)] space-y-3 overflow-y-auto overscroll-contain px-4 py-4 text-sm leading-relaxed [overflow-anchor:none] [scrollbar-gutter:stable] focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-primary lg:h-[26rem]"
+                className={`h-[min(22rem,60svh)] space-y-3 overflow-y-auto overscroll-contain px-4 py-4 text-sm leading-relaxed [overflow-anchor:none] [scrollbar-gutter:stable] focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-primary ${productPage ? "lg:h-[min(32cqw,24rem)]" : "lg:h-[26rem]"}`}
               >
                 {!visibleMessages && !playing && (
                   <p className="rounded-xl bg-muted p-4">
