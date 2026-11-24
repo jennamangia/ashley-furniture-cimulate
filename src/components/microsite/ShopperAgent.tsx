@@ -173,8 +173,8 @@ export function ShopperAgent() {
             <img
               src={sofaImage}
               alt={sofaAlt}
-              width={productPage ? 2015 : 1440}
-              height={productPage ? 1248 : 960}
+              width={productPage ? 2137 : 1440}
+              height={productPage ? 1323 : 960}
               className="block h-auto w-full"
               loading="lazy"
             />
