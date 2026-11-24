@@ -65,21 +65,21 @@ export function Understanding() {
             <div className="space-y-3">
               <h4 className="font-semibold text-foreground">Understand the Shopper</h4>
               <p>
-                Cimulate builds a commerce-specific Small Language Model (SLM) tailored to Ashley’s
-                catalog, furniture categories, and styles. It connects shopping missions like
-                furnishing a first apartment or finding a family-friendly sectional with relevant
-                products.
+                Agentic Commerce Search builds a commerce-specific Small Language Model (SLM)
+                tailored to Ashley’s catalog, furniture categories, and styles. It connects shopping
+                missions like furnishing a first apartment or finding a family-friendly sectional
+                with relevant products.
               </p>
             </div>
             <div className="space-y-3 rounded-xl border border-primary/15 bg-card/65 p-4">
               <h4 className="font-semibold text-foreground">Simulate the Shopping Journey</h4>
               <p>
-                Cimulate generates millions of simulated journeys that model how shoppers discover,
-                compare, and choose furniture. A journey might cover fitting a sectional into a
-                small living room, coordinating a bedroom, comparing recliners for comfort and
-                function, or furnishing a child’s room around a color. These journeys teach the
-                model about product relationships and purchase decisions before significant
-                retailer-specific behavior is available.
+                Agentic Commerce Search generates millions of simulated journeys that model how
+                shoppers discover, compare, and choose furniture. A journey might cover fitting a
+                sectional into a small living room, coordinating a bedroom, comparing recliners for
+                comfort and function, or furnishing a child’s room around a color. These journeys
+                teach the model about product relationships and purchase decisions before
+                significant retailer-specific behavior is available.
               </p>
             </div>
           </div>
@@ -130,13 +130,13 @@ export function Understanding() {
                 label="Real-world query rewrite — beauty retailer"
                 query="Taylor Swift lipstick"
                 interpretation="Bright red lipstick"
-                explanation="At a beauty retailer, Cimulate interpreted the Taylor Swift reference and translated it into the product attribute the shopper was seeking."
+                explanation="At a beauty retailer, Agentic Commerce Search interpreted the Taylor Swift reference and translated it into the product attribute the shopper was seeking."
               />
               <QueryRewriteExample
                 label="Illustrative furniture example"
-                query="Cloud couch"
-                interpretation="Deep-seated, oversized, plush sofa"
-                explanation="The rewrite turns an informal product concept into furniture characteristics that search can use."
+                query="Furniture for a small apartment that doesn’t feel cramped"
+                interpretation="Compact, space-conscious furniture with streamlined silhouettes"
+                explanation="The shopper describes a living situation and a desired feeling, rather than a specific product. Agentic Commerce Search can interpret the underlying intent and connect it to relevant furniture characteristics."
               />
             </div>
           </article>
@@ -173,11 +173,12 @@ export function Understanding() {
           </span>
           <div>
             <h3 className="text-lg font-semibold md:text-xl">
-              Built for Salesforce Commerce Cloud. Powered by Agentic Search.
+              Already on Salesforce Commerce Cloud? You’re One Step Ahead.
             </h3>
             <p className="mt-1 max-w-4xl text-sm leading-relaxed text-navy-muted md:text-base">
-              Cimulate can bring AI-native, intent-led discovery to Ashley’s existing Salesforce
-              Commerce Cloud storefront without requiring a commerce-platform migration.
+              With Ashley already on Salesforce Commerce Cloud, Agentic Commerce Search can build on
+              the existing product catalog and commerce foundation, reducing the need for extensive
+              catalog reconfiguration or manual search setup.
             </p>
           </div>
         </div>

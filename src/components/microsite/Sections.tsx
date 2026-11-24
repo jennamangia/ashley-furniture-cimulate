@@ -139,14 +139,14 @@ export function Hero({ setActive }: { setActive: (index: number) => void }) {
       <div className="mx-auto grid w-full max-w-7xl items-center gap-12 px-6 py-24 lg:grid-cols-[1.25fr_1fr]">
         <div className="relative z-10">
           <span className="inline-flex items-center gap-2 rounded-full border border-sky/30 bg-navy/40 px-4 py-1.5 text-xs font-bold text-sky">
-            <Cloud className="w-5" /> Cimulate <span aria-hidden="true">|</span>
-            <span className="font-medium">Acquired by Salesforce</span>
+            <Cloud className="w-5" /> Agentic Commerce Search <span aria-hidden="true">|</span>
+            <span className="font-medium">Salesforce</span>
           </span>
           <p className="eyebrow mt-6 text-sky">Ashley Furniture × Agentic Commerce Search</p>
-          <h1 className="mt-4 text-4xl font-semibold leading-[1.08] sm:text-5xl xl:text-6xl">
+          <h1 className="mt-4 text-[clamp(1.875rem,4.2vw,3.75rem)] font-semibold leading-[1.08] text-balance">
             Ashley Knows How to Furnish a Home.{" "}
             <span className="text-sky">
-              Cimulate Understands What Shoppers Are Trying to Create.
+              Agentic Commerce Search Understands What Shoppers Are Trying to Create.
             </span>
           </h1>
           <p className="mt-6 max-w-xl text-lg text-navy-muted md:text-xl">
@@ -181,18 +181,14 @@ export function Hero({ setActive }: { setActive: (index: number) => void }) {
             </select>
           </div>
         </div>
-        <figure className="relative z-10 mx-auto w-full max-w-xl overflow-hidden rounded-[2rem] border border-sky/25 bg-navy/40 shadow-glow">
-          <img
-            src="/images/ashley/altari-room.webp"
-            alt="Ashley Altari Sofa in a furnished living room"
-            width={1440}
-            height={960}
-            className="aspect-[4/3] w-full object-cover"
-          />
-          <figcaption className="px-5 py-3 text-sm font-semibold text-navy-muted">
-            Altari Sofa · Ashley Furniture
-          </figcaption>
-        </figure>
+        <div className="relative z-10 mx-auto w-full max-w-[15rem] sm:max-w-sm">
+          <div className="rounded-[2rem] border border-sky/20 bg-navy/40 p-6 shadow-glow backdrop-blur">
+            <div className="relative">
+              <Cloud className="pointer-events-none absolute inset-x-6 bottom-2 text-sky/15" />
+              <Mascot name="Astro" className="animate-float relative" />
+            </div>
+          </div>
+        </div>
       </div>
       <a
         href="#today"
@@ -353,7 +349,11 @@ export function SearchComparison({
 
   const evidence = [
     { label: "Ashley Furniture", src: q.screenshot, observation: q.ashley },
-    { label: "Living Spaces · ACS", src: q.livingSpacesScreenshot, observation: q.livingSpaces },
+    {
+      label: "Living Spaces using Agentic Commerce Search",
+      src: q.livingSpacesScreenshot,
+      observation: q.livingSpaces,
+    },
   ];
 
   return (
@@ -426,12 +426,9 @@ export function Business() {
         </div>
         <div className="reveal mt-10 grid grid-cols-2 gap-4 lg:grid-cols-3">
           {a.outcomes.map((m) => (
-            <article
-              key={m.label}
-              className={`rounded-2xl border p-4 shadow-soft sm:p-6 ${m.scenario ? "border-primary/30 bg-secondary" : "bg-card"}`}
-            >
+            <article key={m.label} className="rounded-2xl border bg-card p-4 shadow-soft sm:p-6">
               <p className="mb-3 text-xs font-bold text-muted-foreground">
-                {m.scenario ? "Illustrative Ashley scenario" : "Reported customer outcome"}
+                {m.scenario ? "Illustrative improvement scenario" : "Reported customer outcome"}
               </p>
               <p className="font-display text-4xl font-semibold text-primary md:text-5xl">
                 {m.value}
@@ -441,10 +438,10 @@ export function Business() {
           ))}
         </div>
         <p className="mt-5 max-w-4xl text-xs leading-relaxed text-muted-foreground">
-          Reported customer outcomes are from existing Cimulate customer-success materials;
-          individual results vary. The +7% conversion and +5% search RPV figures are illustrative
-          Ashley improvement scenarios, not measured results or validated benchmarks against
-          Constructor.
+          Reported customer outcomes are from existing Agentic Commerce Search customer-success
+          materials; individual results vary. The +7% conversion and +5% search RPV figures are
+          illustrative Ashley improvement scenarios, not measured results or validated benchmarks
+          against Constructor.
         </p>
       </div>
     </section>
@@ -463,8 +460,8 @@ export function Proof() {
             Different Shoppers. Different Intentions. One Smarter Search.
           </h2>
           <p className="mt-6 text-lg text-muted-foreground">
-            From specialized terminology to personal style and shopping occasions, Cimulate
-            understands what shoppers actually mean.
+            From specialized terminology to personal style and shopping occasions, Agentic Commerce
+            Search understands what shoppers actually mean.
           </p>
         </div>
         <div className="mt-12 grid gap-x-8 gap-y-12 lg:grid-cols-3 lg:gap-y-0">
@@ -514,14 +511,14 @@ export function Closing() {
       <div className="reveal relative mx-auto grid max-w-6xl items-center gap-12 px-6 lg:grid-cols-[1fr_260px]">
         <div>
           <h2 className="text-4xl font-semibold leading-[1.08] md:text-6xl">
-            Ashley understands furniture. Cimulate understands the shopper’s mission.
+            Ashley understands furniture. Agentic Commerce Search understands the shopper’s mission.
           </h2>
           <p className="mt-8 max-w-2xl text-lg leading-relaxed md:text-xl">
             Help shoppers turn the room they have in mind into furniture they can explore and choose
             with confidence.
           </p>
           <p className="mt-10 text-sm font-semibold text-navy-muted">
-            Cimulate <span aria-hidden="true">|</span> Acquired by Salesforce
+            Agentic Commerce Search <span aria-hidden="true">|</span> Salesforce
           </p>
         </div>
         <div className="relative mx-auto w-56 md:w-64">
