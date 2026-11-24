@@ -15,13 +15,13 @@ import { ShopperAgent } from "@/components/microsite/ShopperAgent";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Ashley Furniture × Cimulate — Reimagining Discovery" },
+      { title: "Ashley Furniture × Agentic Commerce Search — Reimagining Discovery" },
       {
         name: "description",
         content:
-          "An executive concept showing how Cimulate, acquired by Salesforce, could transform product discovery for Ashley Furniture.",
+          "An executive concept showing how Salesforce Agentic Commerce Search could transform product discovery for Ashley Furniture.",
       },
-      { property: "og:title", content: "Ashley Furniture × Cimulate" },
+      { property: "og:title", content: "Ashley Furniture × Agentic Commerce Search" },
       {
         property: "og:description",
         content: "From matching words to understanding shopper intent.",

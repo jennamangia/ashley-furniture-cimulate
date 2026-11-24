@@ -138,7 +138,7 @@ describe("Illustrative furniture Shopper Agent", () => {
     fireEvent.click(screen.getByRole("button", { name: "Close Shopper Agent" }));
     act(() => vi.advanceTimersByTime(60000));
     expect(screen.queryByRole("log")).toBeNull();
-    expect(screen.getByRole("img", { name: /Altari Sofa in Slate/ })).toBeVisible();
+    expect(screen.getByRole("img", { name: /Altari Sofa/ })).toBeVisible();
 
     fireEvent.click(screen.getByRole("button", { name: "Ask about this sofa" }));
     expect(screen.getByRole("log")).toBe(history);

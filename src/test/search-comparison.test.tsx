@@ -35,7 +35,7 @@ describe("Ashley search comparison", () => {
 
       for (const [retailer, filename] of [
         ["Ashley Furniture", ashley],
-        ["Living Spaces", living],
+        ["Living Spaces using Agentic Commerce Search", living],
       ]) {
         const zoom = screen.getByRole("button", { name: new RegExp(`Enlarge ${retailer}`) });
         const src = `/images/ashley/search/${encodeURIComponent(filename!)}`;
@@ -72,7 +72,7 @@ describe("Ashley search comparison", () => {
       const illustrative = /\+(7|5)%/.test(card.textContent ?? "");
       expect(
         within(card).getByText(
-          illustrative ? "Illustrative Ashley scenario" : "Reported customer outcome",
+          illustrative ? "Illustrative improvement scenario" : "Reported customer outcome",
         ),
       ).toBeVisible();
     }

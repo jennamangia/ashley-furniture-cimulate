@@ -3,8 +3,17 @@ import { MessageCircle, Pause, Play, RotateCcw, X, ZoomIn } from "lucide-react";
 import { ProductCarousel } from "./ProductCarousel";
 import { Lightbox } from "./Sections";
 
-const sofaImage = "/images/ashley/altari-room.webp";
-const sofaAlt = "Ashley Furniture’s Altari Sofa in Slate in a furnished living room.";
+const [productPage] = Object.values(
+  import.meta.glob<string>("/src/assets/ashley/altari-pdp.{png,jpg,jpeg}", {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }),
+);
+const sofaImage = productPage ?? "/images/ashley/altari-room.webp";
+const sofaAlt = productPage
+  ? "Ashley Furniture Altari Sofa product page with the product gallery, price and color options."
+  : "Ashley Furniture’s Altari Sofa in Slate in a furnished living room.";
 
 const exchanges = [
   {
@@ -148,41 +157,35 @@ export function ShopperAgent() {
         <figcaption className="border-b bg-secondary px-4 py-3 text-sm font-semibold text-primary sm:px-6">
           Illustrative Shopper Agent experience
           <span className="mt-1 block text-xs font-medium text-muted-foreground sm:ml-3 sm:mt-0 sm:inline">
-            Scripted demonstration with authentic Ashley product photography
+            {productPage
+              ? "Scripted demonstration on a captured Ashley product page"
+              : "Scripted demonstration with authentic Ashley product photography"}
           </span>
         </figcaption>
-        <div className="grid grid-cols-1 items-start lg:grid-cols-[minmax(0,1fr)_22rem]">
+        <div
+          className={
+            productPage
+              ? "bg-white"
+              : "grid grid-cols-1 items-start lg:grid-cols-[minmax(0,1fr)_22rem]"
+          }
+        >
           <div>
             <img
               src={sofaImage}
               alt={sofaAlt}
-              width={1440}
-              height={960}
+              width={productPage ? 2137 : 1440}
+              height={productPage ? 1323 : 960}
               className="block h-auto w-full"
               loading="lazy"
             />
-            <div className="flex flex-wrap items-center justify-between gap-3 border-t px-4 py-3">
-              <div>
-                <p className="font-display font-semibold">Altari Sofa</p>
-                <a
-                  href="https://www.ashleyfurniture.com/p/altari_sofa/8721338.html"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-sm font-semibold text-primary hover:underline"
-                >
-                  View product on Ashley
-                </a>
-              </div>
-              <button
-                type="button"
-                onClick={() => setZoom(true)}
-                className="inline-flex items-center gap-2 rounded px-1 py-1 text-sm font-semibold text-primary hover:underline focus-visible:outline-2 focus-visible:outline-offset-2"
-              >
-                <ZoomIn className="size-4" aria-hidden="true" /> Enlarge product image
-              </button>
-            </div>
           </div>
-          <div className="min-w-0 self-stretch border-t bg-muted p-4 lg:border-l lg:border-t-0">
+          <div
+            className={
+              productPage
+                ? "relative z-10 min-w-0 px-4 pb-4 lg:ml-auto lg:-mt-28 lg:w-[22rem]"
+                : "min-w-0 self-stretch border-t bg-muted p-4 lg:border-l lg:border-t-0"
+            }
+          >
             <div
               id="sofa-conversation"
               ref={panel}
@@ -305,6 +308,26 @@ export function ShopperAgent() {
               </button>
             )}
           </div>
+        </div>
+        <div className="flex flex-wrap items-center justify-between gap-3 border-t px-4 py-3">
+          <div>
+            <p className="font-display font-semibold">Altari Sofa</p>
+            <a
+              href="https://www.ashleyfurniture.com/p/altari_sofa/8721338.html"
+              target="_blank"
+              rel="noreferrer"
+              className="text-sm font-semibold text-primary hover:underline"
+            >
+              View product on Ashley
+            </a>
+          </div>
+          <button
+            type="button"
+            onClick={() => setZoom(true)}
+            className="inline-flex items-center gap-2 rounded px-1 py-1 text-sm font-semibold text-primary hover:underline focus-visible:outline-2 focus-visible:outline-offset-2"
+          >
+            <ZoomIn className="size-4" aria-hidden="true" /> Enlarge product image
+          </button>
         </div>
       </figure>
       <Lightbox
